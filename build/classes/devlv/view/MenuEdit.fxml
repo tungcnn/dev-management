@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1c2e43;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="devlv.controller.MenuEditController">
+    <children>
+        <Label alignment="CENTER" layoutX="104.0" layoutY="33.0" text="Edit Personal Information" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <font>
+                <Font name="Agency FB Bold" size="36.0" />
+            </font>
+        </Label>
+        <GridPane layoutX="98.0" layoutY="102.0" prefHeight="224.0" prefWidth="413.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.4000244140625" minWidth="10.0" prefWidth="123.60003662109375" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="290.79998779296875" minWidth="10.0" prefWidth="288.39996337890625" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="142.0" text="New Name" textFill="WHITE">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="146.0" text="New ID" textFill="WHITE" GridPane.rowIndex="1">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER_RIGHT" prefHeight="22.0" prefWidth="174.0" text="New Date of Birth" textFill="WHITE" GridPane.rowIndex="2">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="name" prefHeight="14.0" prefWidth="288.0" GridPane.columnIndex="1">
+                    <GridPane.margin>
+                        <Insets left="20.0" />
+                    </GridPane.margin>
+                </TextField>
+                <TextField fx:id="id" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets left="20.0" />
+                    </GridPane.margin>
+                </TextField>
+                <TextField fx:id="date" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <GridPane.margin>
+                        <Insets left="20.0" />
+                    </GridPane.margin>
+                </TextField>
+            </children>
+        </GridPane>
+        <Button layoutX="14.0" layoutY="343.0" mnemonicParsing="false" onMouseClicked="#handleCancel" prefHeight="42.0" prefWidth="94.0" style="-fx-background-color: #e6692c;" text="Cancel" textFill="WHITE">
+            <font>
+                <Font name="Arial Bold" size="19.0" />
+            </font>
+        </Button>
+      <Button layoutX="257.0" layoutY="343.0" mnemonicParsing="false" onMouseClicked="#handleSave" prefHeight="42.0" prefWidth="94.0" style="-fx-background-color: #e6692c;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font>
+      </Button>
+      <Button layoutX="462.0" layoutY="343.0" mnemonicParsing="false" onMouseClicked="#handleTest" prefHeight="42.0" prefWidth="124.0" style="-fx-background-color: #e6692c;" text="Retry test" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font>
+      </Button>
+      <Button layoutX="499.0" layoutY="42.0" mnemonicParsing="false" onMouseClicked="#handleShowInfo" prefHeight="26.0" prefWidth="50.0" style="-fx-background-color: #e6692c;" text="Show" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>

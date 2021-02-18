@@ -1,0 +1,2174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane stylesheets="@../view/css/question.css" id="AnchorPane" prefHeight="720.0" prefWidth="1200.0" style="-fx-background-color: #1c2e43;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="devlv.controller.QuestionController">
+<!--    <stylesheets>
+        <URL value="@../view/css/question.css" />
+    </stylesheets>-->
+    <children>
+        <TabPane fx:id="tabPane" layoutX="34.0" layoutY="21.0" prefHeight="720.0" prefWidth="1200.0" style="-fx-background-color: #1c2e43;" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <tabs>
+                <Tab text="Q1">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label alignment="CENTER" layoutX="459.0" layoutY="36.0" prefHeight="75.0" prefWidth="1200.0" text="Computer Science" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <font>
+                                        <Font name="Arial Bold" size="40.0" />
+                                    </font>
+                                </Label>
+                                <GridPane layoutX="221.0" layoutY="178.0" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="75.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.20001220703125" minWidth="10.0" prefWidth="39.999969482421875" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="773.6000061035156" minWidth="10.0" prefWidth="760.0000305175781" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="130.59998168945313" minHeight="10.0" percentHeight="12.0" prefHeight="92.40001831054687" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="248.80001831054688" minHeight="10.0" percentHeight="22.0" prefHeight="110.59998779296878" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="211.39999999999998" minHeight="10.0" percentHeight="22.0" prefHeight="110.39998779296877" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="109.00005493164065" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="125.1999450683594" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label text="Data Structures" textFill="WHITE" GridPane.columnIndex="1">
+                                            <font>
+                                                <Font name="Arial Italic" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="799.0" text="Không phân biệt được ArrayList và Linked List" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="q1" />
+                                            </toggleGroup>
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="133.0" prefWidth="800.0" text="Giải thích và sử dụng hợp lý ArrayList, LinkedList, Dictionaries, ... trong việc giải quyết các bài toàn lập trình" textFill="WHITE" toggleGroup="$q1" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="102.0" prefWidth="800.0" text="So sánh được sự khác nhau về không gian, thời gian giữa các data structures, giải thích được cách triển khai hashtable và xử lý hash collision, PriorityQueue và cách triển khai nó, vv" textFill="WHITE" toggleGroup="$q1" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="153.0" prefWidth="800.0" text="Biết những data structures cấp cao như B-trees, binominal heap, fibonacci heap, AVL/Red Black trees, Splay Trees, Skip Lists, tries, vv" textFill="WHITE" toggleGroup="$q1" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <Label prefHeight="18.0" prefWidth="52.0" text="Lv0" textFill="WHITE" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="50.0" text="Lv1" textFill="WHITE" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="73.0" text="Lv2" textFill="WHITE" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="56.0" text="Lv3" textFill="WHITE" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Q2">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="75.0" prefWidth="1200.0" text="Computer Science" textFill="WHITE">
+                                    <font>
+                                        <Font name="Arial Bold" size="40.0" />
+                                    </font>
+                                </Label>
+                                <GridPane AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="75.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.20001220703125" minWidth="10.0" prefWidth="39.999969482421875" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="773.6000061035156" minWidth="10.0" prefWidth="760.0000305175781" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="130.59998168945313" minHeight="10.0" percentHeight="12.0" prefHeight="92.40001831054687" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="250.0" minHeight="10.0" percentHeight="22.0" prefHeight="111.39997558593753" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="211.39999999999998" minHeight="10.0" percentHeight="22.0" prefHeight="108.00001220703126" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="113.00006713867185" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="121.99993286132815" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label text="Algorithms" textFill="WHITE" GridPane.columnIndex="1">
+                                            <font>
+                                                <Font name="Arial Italic" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="799.0" text="Không tìm được trung bình, min, max, ... của một mảng" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="q2" />
+                                            </toggleGroup>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="133.0" prefWidth="800.0" text="Vận dụng được các thuật toán cơ bản trong việc tìm kiếm, sắp xếp, duyệt phần tử, ..." textFill="WHITE" toggleGroup="$q2" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="122.0" prefWidth="761.0" text="Vận dụng được các giải thuật Tree, Graph, tham lam, chia để trị, ... Hiểu được tầm quan trọng của level này" textFill="WHITE" toggleGroup="$q2" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="761.0" text="Có khả năng hiểu và cài đặt giải thuật dynamic programming, có kiến thức tốt về giải thuật graph, thuật toán giải tích, nhận diện bài toán NP, ..." textFill="WHITE" toggleGroup="$q2" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <Label prefHeight="18.0" prefWidth="52.0" text="Lv0" textFill="WHITE" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="50.0" text="Lv1" textFill="WHITE" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="73.0" text="Lv2" textFill="WHITE" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="56.0" text="Lv3" textFill="WHITE" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Q3">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="75.0" prefWidth="1200.0" text="Computer Science" textFill="WHITE">
+                                    <font>
+                                        <Font name="Arial Bold" size="40.0" />
+                                    </font>
+                                </Label>
+                                <GridPane AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="75.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.20001220703125" minWidth="10.0" prefWidth="39.999969482421875" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="773.6000061035156" minWidth="10.0" prefWidth="760.0000305175781" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="130.59998168945313" minHeight="10.0" percentHeight="12.0" prefHeight="92.40001831054687" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="250.0" minHeight="10.0" percentHeight="22.0" prefHeight="111.39997558593753" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="211.39999999999998" minHeight="10.0" percentHeight="22.0" prefHeight="108.00001220703126" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="113.00006713867185" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="121.99993286132815" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label text="Systems Programming" textFill="WHITE" GridPane.columnIndex="1">
+                                            <font>
+                                                <Font name="Arial Italic" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="799.0" text="Không phân biệt được compiler, linker và intepreter" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="q3" />
+                                            </toggleGroup>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="133.0" prefWidth="800.0" text="Có kiến thức cơ bản về compiler, linker và intepreter. Hiểu ngôn ngữ assembly là gì và cách máy móc vận hành ở phần cứng. Có một ít kiến thức về virtual memory (bộ nhớ ảo) và paging (phân trang)" textFill="WHITE" toggleGroup="$q3" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="122.0" prefWidth="761.0" text="Hiểu kernel mode (chế độ kernel) và user mode (chế độ người dùng). Multi-threading (đa luồng), cách cài đặt synchronization (đồng bộ). Hiểu cách hoạt động của network, lập trình ở mức protocols (giao thức) và socket." textFill="WHITE" toggleGroup="$q3" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton alignment="CENTER_RIGHT" mnemonicParsing="false" prefHeight="137.0" prefWidth="761.0" text="Có đầy đủ kiến thức về phần cứng (CPU + Bộ nhớ + Cache + Interrupts + Microcode), binary code (mã nhị phân), assembly, static linking và dynamic linking, compilation (biên dịch), interpretation (thông dịch), biên dịch JIT, garbage  collection (cơ chế dọn rác), heap, stack, memory address (địa chỉ vùng nhớ) ..." textFill="WHITE" toggleGroup="$q3" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <Label prefHeight="18.0" prefWidth="52.0" text="Lv0" textFill="WHITE" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="50.0" text="Lv1" textFill="WHITE" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="73.0" text="Lv2" textFill="WHITE" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="56.0" text="Lv3" textFill="WHITE" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Q4">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="75.0" prefWidth="1200.0" text="Software Engineering" textFill="WHITE">
+                                    <font>
+                                        <Font name="Arial Bold" size="40.0" />
+                                    </font>
+                                </Label>
+                                <GridPane AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="75.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.20001220703125" minWidth="10.0" prefWidth="39.999969482421875" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="773.6000061035156" minWidth="10.0" prefWidth="760.0000305175781" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="130.59998168945313" minHeight="10.0" percentHeight="12.0" prefHeight="92.40001831054687" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="250.0" minHeight="10.0" percentHeight="22.0" prefHeight="111.39997558593753" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="211.39999999999998" minHeight="10.0" percentHeight="22.0" prefHeight="108.00001220703126" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="113.00006713867185" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="121.99993286132815" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label text="Source code version control" textFill="WHITE" GridPane.columnIndex="1">
+                                            <font>
+                                                <Font name="Arial Italic" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="799.0" text="Backup folder tùy hứng hoặc không back up." textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="q4" />
+                                            </toggleGroup>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="133.0" prefWidth="800.0" text="Mới dùng VSS, CVS hoặc SVN" textFill="WHITE" toggleGroup="$q4" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="122.0" prefWidth="761.0" text="Thành thạo sử dụng các chức năng của CVS và SVN. Biết cách branch và merge, cài đặt repo ..." textFill="WHITE" toggleGroup="$q4" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="761.0" text="Biết dùng distributed VCS systems (quản lý mã nguồn phân tán). Dùng thành thạo Bzr/Mercurial/Darcs/Git" textFill="WHITE" toggleGroup="$q4" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <Label prefHeight="18.0" prefWidth="52.0" text="Lv0" textFill="WHITE" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="50.0" text="Lv1" textFill="WHITE" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="73.0" text="Lv2" textFill="WHITE" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="56.0" text="Lv3" textFill="WHITE" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Q5">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="75.0" prefWidth="1200.0" text="Software Engineering" textFill="WHITE" AnchorPane.topAnchor="0.0">
+                                    <font>
+                                        <Font name="Arial Bold" size="40.0" />
+                                    </font>
+                                </Label>
+                                <GridPane AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="75.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.20001220703125" minWidth="10.0" prefWidth="39.999969482421875" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="773.6000061035156" minWidth="10.0" prefWidth="760.0000305175781" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="130.59998168945313" minHeight="10.0" percentHeight="12.0" prefHeight="92.40001831054687" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="250.0" minHeight="10.0" percentHeight="22.0" prefHeight="111.39997558593753" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="211.39999999999998" minHeight="10.0" percentHeight="22.0" prefHeight="108.00001220703126" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="113.00006713867185" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="121.99993286132815" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label text="Build automations (Xây dựng tự động hóa)" textFill="WHITE" GridPane.columnIndex="1">
+                                            <font>
+                                                <Font name="Arial Italic" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="799.0" text="Chỉ biết viết bằng IDE" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="q5" />
+                                            </toggleGroup>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="133.0" prefWidth="800.0" text="Viết được tự động hóa trên command line" textFill="WHITE" toggleGroup="$q5" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="122.0" prefWidth="761.0" text="Có thể cài đặt script để xây dựng hệ thống cơ bản" textFill="WHITE" toggleGroup="$q5" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="761.0" text="Có thể cài đặt script để xây dựng hệ thống, documentation (ghi ra văn bản), installers (chương trình cài đặt), sản sinh release notes và đánh dấu code trong source control, " textFill="WHITE" toggleGroup="$q5" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <Label prefHeight="18.0" prefWidth="52.0" text="Lv0" textFill="WHITE" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="50.0" text="Lv1" textFill="WHITE" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="73.0" text="Lv2" textFill="WHITE" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="56.0" text="Lv3" textFill="WHITE" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Q6">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="75.0" prefWidth="1200.0" text="Software Engineering">
+                                    <font>
+                                        <Font name="Arial Bold" size="40.0" />
+                                    </font>
+                                </Label>
+                                <GridPane AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="75.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.20001220703125" minWidth="10.0" prefWidth="39.999969482421875" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="773.6000061035156" minWidth="10.0" prefWidth="760.0000305175781" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="130.59998168945313" minHeight="10.0" percentHeight="12.0" prefHeight="92.40001831054687" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="250.0" minHeight="10.0" percentHeight="22.0" prefHeight="111.39997558593753" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="211.39999999999998" minHeight="10.0" percentHeight="22.0" prefHeight="108.00001220703126" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="113.00006713867185" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="121.99993286132815" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label text="Automated Testing" GridPane.columnIndex="1">
+                                            <font>
+                                                <Font name="Arial Italic" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="799.0" text="Nghĩ test là việc của tester" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="q6" />
+                                            </toggleGroup>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="133.0" prefWidth="800.0" text="Đã từng viết mã kiểm thử. Lập ra được các trường hợp tốt để test code" toggleGroup="$q6" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="122.0" prefWidth="761.0" text="Đã viết code theo hướng TDD (lập trình hướng kiểm thử)" toggleGroup="$q6" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="761.0" text="Hiểu và thiết lập được test tự động về thời gian load, performance (hiệu suất) và UI (giao diện người dùng)" toggleGroup="$q6" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <Label prefHeight="18.0" prefWidth="52.0" text="Lv0" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="50.0" text="Lv1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="73.0" text="Lv2" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="56.0" text="Lv3" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Q7">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="75.0" prefWidth="1200.0" text="Programming">
+                                    <font>
+                                        <Font name="Arial Bold" size="40.0" />
+                                    </font>
+                                </Label>
+                                <GridPane AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="75.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.20001220703125" minWidth="10.0" prefWidth="39.999969482421875" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="773.6000061035156" minWidth="10.0" prefWidth="760.0000305175781" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="130.59998168945313" minHeight="10.0" percentHeight="12.0" prefHeight="92.40001831054687" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="250.0" minHeight="10.0" percentHeight="22.0" prefHeight="111.39997558593753" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="211.39999999999998" minHeight="10.0" percentHeight="22.0" prefHeight="108.00001220703126" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="113.00006713867185" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="121.99993286132815" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label prefHeight="36.0" prefWidth="797.0" text="Problem decomposition" GridPane.columnIndex="1">
+                                            <font>
+                                                <Font name="Arial Italic" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="799.0" text="Chỉ biết copy paste khi muốn dùng lại" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="q7" />
+                                            </toggleGroup>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="133.0" prefWidth="800.0" text="Biết cách phân bài toán thành nhiều functions." toggleGroup="$q7" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="122.0" prefWidth="761.0" text="Biết cách viết functions/class/object ... để dùng lại nhằm giải quyết bài toán to." toggleGroup="$q7" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="761.0" text="Vận dụng chính xác data structures, giải thuật, generics, code theo hướng OOP để bao quát vấn đề, nhằm dễ dàng chỉnh sửa về sau" toggleGroup="$q7" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <Label prefHeight="18.0" prefWidth="52.0" text="Lv0" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="50.0" text="Lv1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="73.0" text="Lv2" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="56.0" text="Lv3" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Q8">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="75.0" prefWidth="1200.0" text="Programming">
+                                    <font>
+                                        <Font name="Arial Bold" size="40.0" />
+                                    </font>
+                                </Label>
+                                <GridPane AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="75.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.20001220703125" minWidth="10.0" prefWidth="39.999969482421875" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="773.6000061035156" minWidth="10.0" prefWidth="760.0000305175781" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="130.59998168945313" minHeight="10.0" percentHeight="12.0" prefHeight="92.40001831054687" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="250.0" minHeight="10.0" percentHeight="22.0" prefHeight="111.39997558593753" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="211.39999999999998" minHeight="10.0" percentHeight="22.0" prefHeight="108.00001220703126" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="113.00006713867185" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="121.99993286132815" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label prefHeight="36.0" prefWidth="811.0" text="Systems decomposition" GridPane.columnIndex="1">
+                                            <font>
+                                                <Font name="Arial Italic" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="799.0" text="Không biết nghĩ xa hơn 1 file/class." GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="q8" />
+                                            </toggleGroup>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="133.0" prefWidth="800.0" text="Có thể phân bổ không gian và thiết kế giải pháp hợp lý trên một platform (nền tảng) hoặc công nghệ mà mình biết." toggleGroup="$q8" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="122.0" prefWidth="761.0" text="Có thể thiết kế hệ thống trên nhiều công nghệ và nền tảng" toggleGroup="$q8" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="761.0" text="Hình dung và thiết kế được hệ thống phức tạp với nhiều product lines và tích hợp hệ thống bên ngoài. Ngoài ra còn có khả năng thiết kế các hệ thống hỗ trợ như giám sát, báo cáo ..." toggleGroup="$q8" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <Label prefHeight="18.0" prefWidth="52.0" text="Lv0" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="50.0" text="Lv1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="73.0" text="Lv2" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="56.0" text="Lv3" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Q9">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="75.0" prefWidth="1200.0" text="Programming">
+                                    <font>
+                                        <Font name="Arial Bold" size="40.0" />
+                                    </font>
+                                </Label>
+                                <GridPane AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="75.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.20001220703125" minWidth="10.0" prefWidth="39.999969482421875" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="773.6000061035156" minWidth="10.0" prefWidth="760.0000305175781" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="130.59998168945313" minHeight="10.0" percentHeight="12.0" prefHeight="92.40001831054687" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="250.0" minHeight="10.0" percentHeight="22.0" prefHeight="111.39997558593753" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="211.39999999999998" minHeight="10.0" percentHeight="22.0" prefHeight="108.00001220703126" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="113.00006713867185" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="121.99993286132815" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label text="Communication" GridPane.columnIndex="1">
+                                            <font>
+                                                <Font name="Arial Italic" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="799.0" text="Không biết diễn đạt suy nghĩ, ý tưởng cho đồng nghiệp. Ngữ pháp chưa tốt" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="q9" />
+                                            </toggleGroup>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="133.0" prefWidth="800.0" text="Đồng nghiệp hiểu mình đang nói gì. Ngữ pháp tốt." toggleGroup="$q9" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="122.0" prefWidth="761.0" text="Giao tiếp hiệu quả với đồng nghiệp" toggleGroup="$q9" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="761.0" text="Hiểu, truyền đạt, giao tiếp những suy nghĩ, thiết kế, ý tưởng một cách rõ ràng. Có khả năng điều chỉnh cách giao tiếp theo ngữ cảnh" toggleGroup="$q9" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <Label prefHeight="18.0" prefWidth="52.0" text="Lv0" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="50.0" text="Lv1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="73.0" text="Lv2" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="56.0" text="Lv3" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Q10">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="75.0" prefWidth="1200.0" text="Programming">
+                                    <font>
+                                        <Font name="Arial Bold" size="40.0" />
+                                    </font>
+                                </Label>
+                                <GridPane AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="75.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.20001220703125" minWidth="10.0" prefWidth="39.999969482421875" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="773.6000061035156" minWidth="10.0" prefWidth="760.0000305175781" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="130.59998168945313" minHeight="10.0" percentHeight="12.0" prefHeight="92.40001831054687" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="250.0" minHeight="10.0" percentHeight="22.0" prefHeight="111.39997558593753" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="211.39999999999998" minHeight="10.0" percentHeight="22.0" prefHeight="108.00001220703126" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="113.00006713867185" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="121.99993286132815" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label prefHeight="36.0" prefWidth="787.0" text="Code organization in a file (sắp xếp code trong file)" GridPane.columnIndex="1">
+                                            <font>
+                                                <Font name="Arial Italic" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="799.0" text="Không biết sắp xếp." GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="q10" />
+                                            </toggleGroup>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="133.0" prefWidth="800.0" text="Phương thức được nhóm một cách logic hoặc theo khả năng truy cập." toggleGroup="$q10" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="122.0" prefWidth="761.0" text="Code được nhóm theo vùng, có comment và refer đến file khác nếu có." toggleGroup="$q10" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="761.0" text="File có header, tóm tắt, comment tốt, dùng dấu cách hợp lý. Tổng thể file nhìn đẹp." toggleGroup="$q10" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <Label prefHeight="18.0" prefWidth="52.0" text="Lv0" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="50.0" text="Lv1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="73.0" text="Lv2" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="56.0" text="Lv3" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Q11">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="75.0" prefWidth="1200.0" text="Programming">
+                                    <font>
+                                        <Font name="Arial Bold" size="40.0" />
+                                    </font>
+                                </Label>
+                                <GridPane AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="75.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.20001220703125" minWidth="10.0" prefWidth="39.999969482421875" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="773.6000061035156" minWidth="10.0" prefWidth="760.0000305175781" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="130.59998168945313" minHeight="10.0" percentHeight="12.0" prefHeight="92.40001831054687" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="250.0" minHeight="10.0" percentHeight="22.0" prefHeight="111.39997558593753" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="211.39999999999998" minHeight="10.0" percentHeight="22.0" prefHeight="108.00001220703126" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="113.00006713867185" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="121.99993286132815" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label prefHeight="36.0" prefWidth="831.0" text="Code organization accross files" GridPane.columnIndex="1">
+                                            <font>
+                                                <Font name="Arial Italic" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="799.0" text="Không suy nghĩ gì về cách sắp xếp code trên nhiều file." GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="q11" />
+                                            </toggleGroup>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="133.0" prefWidth="800.0" text="Files liên quan được nhóm với nhau" toggleGroup="$q11" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="122.0" prefWidth="761.0" text="Mỗi file có một mục đích duy nhất (định nghĩa chỉ 1 class, thực hiện 1 chức năng, ...)" toggleGroup="$q11" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="761.0" text="Cách sắp xếp files giống với thiết kế, từ cách đặt tên đến chia folder. Nhìn vào cách sắp xếp có thể hình dung ra thiết kế" toggleGroup="$q11" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <Label prefHeight="18.0" prefWidth="52.0" text="Lv0" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="50.0" text="Lv1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="73.0" text="Lv2" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="56.0" text="Lv3" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Q12">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="75.0" prefWidth="1200.0" text="Programming" AnchorPane.topAnchor="0.0">
+                                    <font>
+                                        <Font name="Arial Bold" size="40.0" />
+                                    </font>
+                                </Label>
+                                <GridPane AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="75.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.20001220703125" minWidth="10.0" prefWidth="39.999969482421875" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="773.6000061035156" minWidth="10.0" prefWidth="760.0000305175781" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="130.59998168945313" minHeight="10.0" percentHeight="12.0" prefHeight="92.40001831054687" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="250.0" minHeight="10.0" percentHeight="22.0" prefHeight="111.39997558593753" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="211.39999999999998" minHeight="10.0" percentHeight="22.0" prefHeight="108.00001220703126" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="113.00006713867185" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="121.99993286132815" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label prefHeight="36.0" prefWidth="840.0" text="Source tree organization" GridPane.columnIndex="1">
+                                            <font>
+                                                <Font name="Arial Italic" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="799.0" text="Mọi thứ nằm trong 1 folder." GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="q12" />
+                                            </toggleGroup>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="133.0" prefWidth="800.0" text="Chia code theo folder một cách logic, ở mức cơ bản." toggleGroup="$q12" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="122.0" prefWidth="761.0" text="Không có sự phụ thuộc vòng tròn. Binaries (file nhị phân), thư viện, văn bản, 3rd party code (code của bên thứ 3) đều được chia vào folder hợp lý." toggleGroup="$q12" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="761.0" text="Cấu tạo của source tree giống với thiết kế, cách tổ chức, phả hệ. Tên folder và cách sắp xếp cho thấy thiết kế của hệ thống." toggleGroup="$q12" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <Label prefHeight="18.0" prefWidth="52.0" text="Lv0" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="50.0" text="Lv1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="73.0" text="Lv2" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="56.0" text="Lv3" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                                <Label layoutX="200.0" layoutY="565.0" prefHeight="67.0" prefWidth="799.0" text="* Sự khác biệt của phần này với phần trước nằm ở quy mô. Source tree organization liên quan đến toàn bộ những thành phần làm nên một hệ thống." wrapText="true">
+                                    <font>
+                                        <Font name="Arial Italic" size="17.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Q13">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="75.0" prefWidth="1200.0" text="Programming">
+                                    <font>
+                                        <Font name="Arial Bold" size="40.0" />
+                                    </font>
+                                </Label>
+                                <GridPane AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="75.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.20001220703125" minWidth="10.0" prefWidth="39.999969482421875" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="773.6000061035156" minWidth="10.0" prefWidth="760.0000305175781" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="130.59998168945313" minHeight="10.0" percentHeight="12.0" prefHeight="92.40001831054687" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="250.0" minHeight="10.0" percentHeight="22.0" prefHeight="111.39997558593753" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="211.39999999999998" minHeight="10.0" percentHeight="22.0" prefHeight="108.00001220703126" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="113.00006713867185" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="121.99993286132815" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label prefHeight="36.0" prefWidth="903.0" text="Code readability (độ dễ đọc của code)" GridPane.columnIndex="1">
+                                            <font>
+                                                <Font name="Arial Italic" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="799.0" text="Tên biến chỉ là từ một âm tiết." GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="q13" />
+                                            </toggleGroup>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="133.0" prefWidth="800.0" text="Đặt tên tốt cho files, folders, classé, variables, functions, ..." toggleGroup="$q13" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="122.0" prefWidth="761.0" text="Không có function dài, có comment giải thích đoạn code bất bình thường, bugs được sửa, và code assumption." toggleGroup="$q13" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="761.0" text="Code assumption được kiểm duyệt bởi asserts. Dòng chảy của code rất tự nhiên, không có nesting sâu trong câu điều kiện hoặc hàm." toggleGroup="$q13" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <Label prefHeight="18.0" prefWidth="52.0" text="Lv0" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="50.0" text="Lv1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="73.0" text="Lv2" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="56.0" text="Lv3" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Q14">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="75.0" prefWidth="1200.0" text="Programming">
+                                    <font>
+                                        <Font name="Arial Bold" size="40.0" />
+                                    </font>
+                                </Label>
+                                <GridPane AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="75.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.20001220703125" minWidth="10.0" prefWidth="39.999969482421875" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="773.6000061035156" minWidth="10.0" prefWidth="760.0000305175781" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="130.59998168945313" minHeight="10.0" percentHeight="12.0" prefHeight="92.40001831054687" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="250.0" minHeight="10.0" percentHeight="22.0" prefHeight="111.39997558593753" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="211.39999999999998" minHeight="10.0" percentHeight="22.0" prefHeight="108.00001220703126" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="113.00006713867185" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="121.99993286132815" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label prefHeight="36.0" prefWidth="987.0" text="Defensive Coding (lập trình phòng thủ)" GridPane.columnIndex="1">
+                                            <font>
+                                                <Font name="Arial Italic" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="799.0" text="Không biết khái niệm này." GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="q14" />
+                                            </toggleGroup>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="133.0" prefWidth="800.0" text="Kiểm tra mọi tham số và đánh giá assumption bằng assert." toggleGroup="$q14" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="122.0" prefWidth="761.0" text="Kiếm tra giá trị trả về và exception ở những đoạn code có thể fail." toggleGroup="$q14" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="761.0" text="Có thư viện riêng của mình để hỗ trợ lập trình phòng thủ. Biết viết kiểm thử những trường hợp sinh lỗi." toggleGroup="$q14" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <Label prefHeight="18.0" prefWidth="52.0" text="Lv0" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="50.0" text="Lv1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="73.0" text="Lv2" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="56.0" text="Lv3" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Q15">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="75.0" prefWidth="1200.0" text="Programming">
+                                    <font>
+                                        <Font name="Arial Bold" size="40.0" />
+                                    </font>
+                                </Label>
+                                <GridPane AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="75.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.20001220703125" minWidth="10.0" prefWidth="39.999969482421875" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="773.6000061035156" minWidth="10.0" prefWidth="760.0000305175781" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="130.59998168945313" minHeight="10.0" percentHeight="12.0" prefHeight="92.40001831054687" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="250.0" minHeight="10.0" percentHeight="22.0" prefHeight="111.39997558593753" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="211.39999999999998" minHeight="10.0" percentHeight="22.0" prefHeight="108.00001220703126" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="113.00006713867185" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="121.99993286132815" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label prefHeight="36.0" prefWidth="898.0" text="Error Handling" GridPane.columnIndex="1">
+                                            <font>
+                                                <Font name="Arial Italic" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="799.0" text="Chỉ biết code trường hợp hoàn hảo." GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="q15" />
+                                            </toggleGroup>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="133.0" prefWidth="800.0" text="Xử lý ngoại lệ ở mức cơ bản những đoạn code có thể sinh exception, lỗi." toggleGroup="$q15" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="122.0" prefWidth="761.0" text="Đảm bảo lỗi/exception không làm hỏng chương trình. Tài nguyên, bộ nhớ và kết nối được duy trì tốt." toggleGroup="$q15" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="761.0" text="Code có thể dự đoán trước những exceptions có thể xảy ra. Duy trì chiến lược xử lý exception trong mọi tầng lớp của code. Có thể đề ra cách xử lý exception cho cả hệ thống." toggleGroup="$q15" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <Label prefHeight="18.0" prefWidth="52.0" text="Lv0" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="50.0" text="Lv1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="73.0" text="Lv2" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="56.0" text="Lv3" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Q16">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="75.0" prefWidth="1200.0" text="Programming">
+                                    <font>
+                                        <Font name="Arial Bold" size="40.0" />
+                                    </font>
+                                </Label>
+                                <GridPane AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="75.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.20001220703125" minWidth="10.0" prefWidth="39.999969482421875" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="773.6000061035156" minWidth="10.0" prefWidth="760.0000305175781" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="130.59998168945313" minHeight="10.0" percentHeight="12.0" prefHeight="92.40001831054687" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="250.0" minHeight="10.0" percentHeight="22.0" prefHeight="111.39997558593753" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="211.39999999999998" minHeight="10.0" percentHeight="22.0" prefHeight="108.00001220703126" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="113.00006713867185" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="121.99993286132815" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label text="IDE" GridPane.columnIndex="1">
+                                            <font>
+                                                <Font name="Arial Italic" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="799.0" text="Chỉ dùng IDE để chỉnh sửa code." GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="q16" />
+                                            </toggleGroup>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="133.0" prefWidth="800.0" text="Thông thạo giao diện, sử dụng menu dễ dàng." toggleGroup="$q16" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="122.0" prefWidth="761.0" text="Biết hầu hết các phím tắt hay dùng." toggleGroup="$q16" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="761.0" text="Biết viết macro." toggleGroup="$q16" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <Label prefHeight="18.0" prefWidth="52.0" text="Lv0" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="50.0" text="Lv1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="73.0" text="Lv2" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="56.0" text="Lv3" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Q17">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="75.0" prefWidth="1200.0" text="Programming">
+                                    <font>
+                                        <Font name="Arial Bold" size="40.0" />
+                                    </font>
+                                </Label>
+                                <GridPane AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="75.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.20001220703125" minWidth="10.0" prefWidth="39.999969482421875" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="773.6000061035156" minWidth="10.0" prefWidth="760.0000305175781" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="130.59998168945313" minHeight="10.0" percentHeight="12.0" prefHeight="92.40001831054687" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="250.0" minHeight="10.0" percentHeight="22.0" prefHeight="111.39997558593753" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="211.39999999999998" minHeight="10.0" percentHeight="22.0" prefHeight="108.00001220703126" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="113.00006713867185" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="121.99993286132815" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label text="API" GridPane.columnIndex="1">
+                                            <font>
+                                                <Font name="Arial Italic" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="799.0" text="Thường xuyên phải tra cứu tài liệu" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="q17" />
+                                            </toggleGroup>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="133.0" prefWidth="800.0" text="Thuộc những APIs hay dùng." toggleGroup="$q17" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="122.0" prefWidth="761.0" text="Kiến thức sâu và rộng về các APIs" toggleGroup="$q17" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="761.0" text="Đã từng viết thư viện để đặt trên API nhằm đơn giản hóa tác vụ hay dùng, hoặc lấp vào những khoảng trống trong API" toggleGroup="$q17" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <Label prefHeight="18.0" prefWidth="52.0" text="Lv0" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="50.0" text="Lv1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="73.0" text="Lv2" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="56.0" text="Lv3" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                                <Label layoutX="264.0" layoutY="565.0" prefHeight="26.0" prefWidth="671.0" text="*Ví dụ về API: Thư viện Java , dotNet framework ...">
+                                    <font>
+                                        <Font name="Arial Italic" size="17.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Q18">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="75.0" prefWidth="1200.0" text="Programming">
+                                    <font>
+                                        <Font name="Arial Bold" size="40.0" />
+                                    </font>
+                                </Label>
+                                <GridPane AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="75.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.20001220703125" minWidth="10.0" prefWidth="39.999969482421875" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="773.6000061035156" minWidth="10.0" prefWidth="760.0000305175781" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="130.59998168945313" minHeight="10.0" percentHeight="12.0" prefHeight="92.40001831054687" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="250.0" minHeight="10.0" percentHeight="22.0" prefHeight="111.39997558593753" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="211.39999999999998" minHeight="10.0" percentHeight="22.0" prefHeight="108.00001220703126" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="113.00006713867185" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="121.99993286132815" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label text="Framework" GridPane.columnIndex="1">
+                                            <font>
+                                                <Font name="Arial Italic" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="799.0" text="Chưa từng dùng framework" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="q18" />
+                                            </toggleGroup>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="133.0" prefWidth="800.0" text="Đã từng nghe nhưng chưa sử dụng những framework nổi tiếng với nền tảng của mình." toggleGroup="$q18" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="122.0" prefWidth="761.0" text="Đã dùng nhiều hơn một framework một cách chuyên nghiệp. Thành thạo framework mình dùng." toggleGroup="$q18" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="761.0" text="Là tác giả của framework." toggleGroup="$q18" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <Label prefHeight="18.0" prefWidth="52.0" text="Lv0" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="50.0" text="Lv1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="73.0" text="Lv2" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="56.0" text="Lv3" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Q19">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="75.0" prefWidth="1200.0" text="Programming">
+                                    <font>
+                                        <Font name="Arial Bold" size="40.0" />
+                                    </font>
+                                </Label>
+                                <GridPane AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="75.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.20001220703125" minWidth="10.0" prefWidth="39.999969482421875" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="773.6000061035156" minWidth="10.0" prefWidth="760.0000305175781" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="130.59998168945313" minHeight="10.0" percentHeight="12.0" prefHeight="92.40001831054687" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="250.0" minHeight="10.0" percentHeight="22.0" prefHeight="111.39997558593753" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="211.39999999999998" minHeight="10.0" percentHeight="22.0" prefHeight="108.00001220703126" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="113.00006713867185" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="121.99993286132815" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label prefHeight="36.0" prefWidth="813.0" text="Requirements" GridPane.columnIndex="1">
+                                            <font>
+                                                <Font name="Arial Italic" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="799.0" text="Có thể code dựa theo yêu cầu." GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="q19" />
+                                            </toggleGroup>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="133.0" prefWidth="800.0" text="Biết đặt nghi vấn với những trường hợp thiếu sót trong yêu cầu." toggleGroup="$q19" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="122.0" prefWidth="761.0" text="Hiểu được bức tranh toàn cục và có thể nghĩ ra những phần hoàn toàn mới để triển khai." toggleGroup="$q19" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="761.0" text="Có thể đưa ra những cách khác hoặc mang lại dòng chảy tốt hơn cho chương trình dựa trên kinh nghiệm." toggleGroup="$q19" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <Label prefHeight="18.0" prefWidth="52.0" text="Lv0" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="50.0" text="Lv1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="73.0" text="Lv2" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="56.0" text="Lv3" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Q20">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="75.0" prefWidth="1200.0" text="Programming">
+                                    <font>
+                                        <Font name="Arial Bold" size="40.0" />
+                                    </font>
+                                </Label>
+                                <GridPane AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="75.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.20001220703125" minWidth="10.0" prefWidth="39.999969482421875" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="773.6000061035156" minWidth="10.0" prefWidth="760.0000305175781" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="130.59998168945313" minHeight="10.0" percentHeight="12.0" prefHeight="92.40001831054687" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="250.0" minHeight="10.0" percentHeight="22.0" prefHeight="111.39997558593753" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="211.39999999999998" minHeight="10.0" percentHeight="22.0" prefHeight="108.00001220703126" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="113.00006713867185" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="121.99993286132815" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label text="Scripting" GridPane.columnIndex="1">
+                                            <font>
+                                                <Font name="Arial Italic" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="799.0" text="Không biết các công cụ scripting." GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="q20" />
+                                            </toggleGroup>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="133.0" prefWidth="800.0" text="Biết viết batch files/shell scripts." toggleGroup="$q20" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="122.0" prefWidth="761.0" text="Perl/Python/Ruby/VBScript/Powershell" toggleGroup="$q20" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="761.0" text="Đã từng viết và xuất bản code dùng lại được." toggleGroup="$q20" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <Label prefHeight="18.0" prefWidth="52.0" text="Lv0" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="50.0" text="Lv1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="73.0" text="Lv2" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="56.0" text="Lv3" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Q21">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="75.0" prefWidth="1200.0" text="Programming">
+                                    <font>
+                                        <Font name="Arial Bold" size="40.0" />
+                                    </font>
+                                </Label>
+                                <GridPane AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="75.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.20001220703125" minWidth="10.0" prefWidth="39.999969482421875" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="773.6000061035156" minWidth="10.0" prefWidth="760.0000305175781" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="130.59998168945313" minHeight="10.0" percentHeight="12.0" prefHeight="92.40001831054687" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="250.0" minHeight="10.0" percentHeight="22.0" prefHeight="111.39997558593753" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="211.39999999999998" minHeight="10.0" percentHeight="22.0" prefHeight="108.00001220703126" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="113.00006713867185" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="121.99993286132815" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label text="Database" GridPane.columnIndex="1">
+                                            <font>
+                                                <Font name="Arial Italic" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="799.0" text="Dừng lại ở Excel, text." GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="q21" />
+                                            </toggleGroup>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="133.0" prefWidth="800.0" text="Biết những khái niệm cơ bản của database như normalization (chuẩn hóa), ACID, transactions (giao dịch) và có thể viết code truy vấn đơn giản." toggleGroup="$q21" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="122.0" prefWidth="761.0" text="Có thể thiết kế database chuẩn hóa tốt với những truy vấn có thể cần thực hiện trong tương lai. Thành thạo trong việc dùng view (dạng xem), stored procedure (thủ tục lưu trữ), trigger, kiểu dữ liệu user defined. Biết sự khác biệt giữa clustered và non-clustered indexes. Thành thạo các công cụ ORM" toggleGroup="$q21" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="761.0" text="Có thể quản trị database, tối ưu hiệu suất, tối ưu index, viết querry truy vấn cao cấp, thay việc dùng chuột bằng sql quan hệ. Hiểu cách data và index được lưu trữ ở sâu bên trong bộ nhớ. Hiểu cách mirror/copy database. Hiểu xác nhận hai pha." toggleGroup="$q21" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <Label prefHeight="18.0" prefWidth="52.0" text="Lv0" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="50.0" text="Lv1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="73.0" text="Lv2" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="56.0" text="Lv3" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Q22">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="75.0" prefWidth="1200.0" text="Knowledge">
+                                    <font>
+                                        <Font name="Arial Bold" size="40.0" />
+                                    </font>
+                                </Label>
+                                <GridPane AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="75.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.20001220703125" minWidth="10.0" prefWidth="39.999969482421875" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="773.6000061035156" minWidth="10.0" prefWidth="760.0000305175781" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="130.59998168945313" minHeight="10.0" percentHeight="12.0" prefHeight="92.40001831054687" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="250.0" minHeight="10.0" percentHeight="22.0" prefHeight="111.39997558593753" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="211.39999999999998" minHeight="10.0" percentHeight="22.0" prefHeight="108.00001220703126" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="113.00006713867185" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="121.99993286132815" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label text="Tools" GridPane.columnIndex="1">
+                                            <font>
+                                                <Font name="Arial Italic" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="799.0" text="Chỉ biết những IDE chính (Visual Studio, Eclipse ...)" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="q22" />
+                                            </toggleGroup>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="133.0" prefWidth="800.0" text="Biết thêm những lựa chọn phổ biến/tiêu chuẩn khác." toggleGroup="$q22" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="122.0" prefWidth="761.0" text="Hiểu biết nhiều editors, debuggers, IDEs, nguồn open source khác ... Biết đa số tools trong list của Scott Hanselman. Đã từng dùng các công cụ ORM" toggleGroup="$q22" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="761.0" text="Đã từng viết ra tools và script. Càng tốt nếu tools và scripts ý đã được phát hành." toggleGroup="$q22" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <Label prefHeight="18.0" prefWidth="52.0" text="Lv0" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="50.0" text="Lv1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="73.0" text="Lv2" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="56.0" text="Lv3" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Q23">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="75.0" prefWidth="1200.0" text="Knowledge">
+                                    <font>
+                                        <Font name="Arial Bold" size="40.0" />
+                                    </font>
+                                </Label>
+                                <GridPane AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="75.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.20001220703125" minWidth="10.0" prefWidth="39.999969482421875" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="773.6000061035156" minWidth="10.0" prefWidth="760.0000305175781" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="130.59998168945313" minHeight="10.0" percentHeight="12.0" prefHeight="92.40001831054687" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="250.0" minHeight="10.0" percentHeight="22.0" prefHeight="111.39997558593753" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="211.39999999999998" minHeight="10.0" percentHeight="22.0" prefHeight="108.00001220703126" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="113.00006713867185" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="121.99993286132815" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label prefHeight="36.0" prefWidth="831.0" text="Languages (đã từng tiếp xúc)" GridPane.columnIndex="1">
+                                            <font>
+                                                <Font name="Arial Italic" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="799.0" text="Imperative (mệnh lệnh) hoặc Object Oriented (hướng đối tượng)." GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="q23" />
+                                            </toggleGroup>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="133.0" prefWidth="800.0" text="Imperative, OO, declarative (SQL). Thêm điểm nếu phân biệt được static/dynamic typing, weak/strong typing. Hiểu inferred type." toggleGroup="$q23" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="122.0" prefWidth="761.0" text="Functional (hàm). Thêm điểm nếu hiểu lazy evaluation (đánh giá lười biếng), currying (biến 1 hàm nhiều tham số thành nhiều hàm 1 tham số), continuations." toggleGroup="$q23" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="761.0" text="Concurrent (đồng thời) như là Erlang, Oz. Và ngôn ngữ theo Logic, như là Prolog." toggleGroup="$q23" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <Label prefHeight="18.0" prefWidth="52.0" text="Lv0" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="50.0" text="Lv1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="73.0" text="Lv2" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="56.0" text="Lv3" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Q24">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="75.0" prefWidth="1200.0" text="Knowledge">
+                                    <font>
+                                        <Font name="Arial Bold" size="40.0" />
+                                    </font>
+                                </Label>
+                                <GridPane AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="75.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.20001220703125" minWidth="10.0" prefWidth="39.999969482421875" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="773.6000061035156" minWidth="10.0" prefWidth="760.0000305175781" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="130.59998168945313" minHeight="10.0" percentHeight="12.0" prefHeight="92.40001831054687" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="250.0" minHeight="10.0" percentHeight="22.0" prefHeight="111.39997558593753" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="211.39999999999998" minHeight="10.0" percentHeight="22.0" prefHeight="108.00001220703126" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="113.00006713867185" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="121.99993286132815" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label text="Codebase Knowledge" GridPane.columnIndex="1">
+                                            <font>
+                                                <Font name="Arial Italic" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="799.0" text="Chưa bao giờ nhìn codebase." GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="q24" />
+                                            </toggleGroup>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="133.0" prefWidth="800.0" text="Có kiến thức cơ bản về bố cục code và cách xây dựng hệ thống." toggleGroup="$q24" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="122.0" prefWidth="761.0" text="Có kiến thức tốt về codebase, đã fix bugs hoặc thêm vài tính năng nhỏ vào codebase." toggleGroup="$q24" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="761.0" text="Đã thêm nhiều tính năng lớn vào codebase, có thể dễ dàng nhìn ra thay đổi cần thiết cho hầu hết các chức năng mới hoặc fix bugs." toggleGroup="$q24" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <Label prefHeight="18.0" prefWidth="52.0" text="Lv0" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="50.0" text="Lv1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="73.0" text="Lv2" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="56.0" text="Lv3" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Q25">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="75.0" prefWidth="1200.0" text="Knowledge">
+                                    <font>
+                                        <Font name="Arial Bold" size="40.0" />
+                                    </font>
+                                </Label>
+                                <GridPane AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="75.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.20001220703125" minWidth="10.0" prefWidth="39.999969482421875" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="773.6000061035156" minWidth="10.0" prefWidth="760.0000305175781" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="130.59998168945313" minHeight="10.0" percentHeight="12.0" prefHeight="92.40001831054687" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="250.0" minHeight="10.0" percentHeight="22.0" prefHeight="111.39997558593753" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="211.39999999999998" minHeight="10.0" percentHeight="22.0" prefHeight="108.00001220703126" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="113.00006713867185" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="121.99993286132815" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label prefHeight="36.0" prefWidth="979.0" text="Upcoming technologies (công nghệ trong tương lai)" GridPane.columnIndex="1">
+                                            <font>
+                                                <Font name="Arial Italic" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="799.0" text="Chưa từng nghe đến những công nghệ sắp ra mắt." GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="q25" />
+                                            </toggleGroup>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="133.0" prefWidth="800.0" text="Đã nghe đến những công nghệ mới trong ngành của mình" toggleGroup="$q25" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="122.0" prefWidth="761.0" text="Đã tải xuống bản alpha/CTP/beta nhằm dùng thử. Đã đọc nhiều bài viết/hướng dẫn." toggleGroup="$q25" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="761.0" text="Đã xây dựng cái gì đấy từ công nghệ mới và chia sẻ với mọi người." toggleGroup="$q25" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <Label prefHeight="18.0" prefWidth="52.0" text="Lv0" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="50.0" text="Lv1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="73.0" text="Lv2" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="56.0" text="Lv3" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Q26">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="75.0" prefWidth="1200.0" text="Knowledge">
+                                    <font>
+                                        <Font name="Arial Bold" size="40.0" />
+                                    </font>
+                                </Label>
+                                <GridPane AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="75.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.20001220703125" minWidth="10.0" prefWidth="39.999969482421875" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="773.6000061035156" minWidth="10.0" prefWidth="760.0000305175781" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="130.59998168945313" minHeight="10.0" percentHeight="12.0" prefHeight="92.40001831054687" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="250.0" minHeight="10.0" percentHeight="22.0" prefHeight="111.39997558593753" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="211.39999999999998" minHeight="10.0" percentHeight="22.0" prefHeight="108.00001220703126" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="113.00006713867185" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="121.99993286132815" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label prefHeight="36.0" prefWidth="838.0" text="Platform Internals (bên trong 1 platform)" GridPane.columnIndex="1">
+                                            <font>
+                                                <Font name="Arial Italic" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="799.0" text="Không biết gì về cấu trúc bên trong một platform(nền tảng)." GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="q26" />
+                                            </toggleGroup>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="133.0" prefWidth="800.0" text="Có hiểu biết căn bản về cách hoạt động của một platform." toggleGroup="$q26" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="122.0" prefWidth="761.0" text="Hiểu biết sâu về platform internals. Hình dung được cách platform chuyển chương trình thành code chạy được." toggleGroup="$q26" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="761.0" text="Đã viết tools để tăng cương hoặc cho biết thông tin về platform internals. Ví dụ: debugger, decompilers..." toggleGroup="$q26" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <Label prefHeight="18.0" prefWidth="52.0" text="Lv0" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="50.0" text="Lv1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="73.0" text="Lv2" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="56.0" text="Lv3" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Q27">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="75.0" prefWidth="1200.0" text="Knowledge">
+                                    <font>
+                                        <Font name="Arial Bold" size="40.0" />
+                                    </font>
+                                </Label>
+                                <GridPane AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="75.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.20001220703125" minWidth="10.0" prefWidth="39.999969482421875" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="773.6000061035156" minWidth="10.0" prefWidth="760.0000305175781" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="130.59998168945313" minHeight="10.0" percentHeight="12.0" prefHeight="92.40001831054687" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="250.0" minHeight="10.0" percentHeight="22.0" prefHeight="111.39997558593753" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="211.39999999999998" minHeight="10.0" percentHeight="22.0" prefHeight="108.00001220703126" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="113.00006713867185" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="121.99993286132815" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label text="Books" GridPane.columnIndex="1">
+                                            <font>
+                                                <Font name="Arial Italic" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="799.0" text="Clean Code, Series Unleashed, 21 days, 24 hour, dummies, ..." GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="q27" />
+                                            </toggleGroup>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="133.0" prefWidth="800.0" text="Code Complete, Don't Make me Think, Mastering Regular Expressions." toggleGroup="$q27" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="122.0" prefWidth="761.0" text="Design Patterns, Peopleware, Programming Pearls, Algorithm Design Manual, Pragmatic Programmer, Mythical Man month" toggleGroup="$q27" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="761.0" text="Structure and Interpretation of Computer Programs, Concepts Techniques, Models of Computer Programming, Art of Computer Programming, Database systems, Thinking Forth, Little Schemer" toggleGroup="$q27" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <Label prefHeight="18.0" prefWidth="52.0" text="Lv0" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="50.0" text="Lv1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="73.0" text="Lv2" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="56.0" text="Lv3" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Q28">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="625.0" prefWidth="1200.0">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="75.0" prefWidth="1200.0" text="Knowledge">
+                                    <font>
+                                        <Font name="Arial Bold" size="40.0" />
+                                    </font>
+                                </Label>
+                                <GridPane AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="75.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.20001220703125" minWidth="10.0" prefWidth="39.999969482421875" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="773.6000061035156" minWidth="10.0" prefWidth="760.0000305175781" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="130.59998168945313" minHeight="10.0" percentHeight="12.0" prefHeight="92.40001831054687" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="250.0" minHeight="10.0" percentHeight="22.0" prefHeight="111.39997558593753" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="211.39999999999998" minHeight="10.0" percentHeight="22.0" prefHeight="108.00001220703126" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="113.00006713867185" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="260.00000610351566" minHeight="10.0" percentHeight="22.0" prefHeight="121.99993286132815" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label text="Blogs" GridPane.columnIndex="1">
+                                            <font>
+                                                <Font name="Arial Italic" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="799.0" text="Chưa từng đọc blog." GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="q28" />
+                                            </toggleGroup>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="133.0" prefWidth="800.0" text="Đọc blog về tech/programming/kĩ sư phần mềm. Hoặc nghe podcasts thường xuyên." toggleGroup="$q28" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="122.0" prefWidth="761.0" text="Có blog cá nhân để lưu lại links của những trang báo, bài viết, tools hữu dụng mà bạn thu thập được." toggleGroup="$q28" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton mnemonicParsing="false" prefHeight="137.0" prefWidth="761.0" text="Có blog cá nhân để chia sẻ về góc nhìn, suy nghĩ của cá nhân trong lập trình." toggleGroup="$q28" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <Label prefHeight="18.0" prefWidth="52.0" text="Lv0" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="50.0" text="Lv1" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="73.0" text="Lv2" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="18.0" prefWidth="56.0" text="Lv3" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font name="Arial" size="20.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                                <Button fx:id="submitBtn" layoutX="524.0" layoutY="565.0" mnemonicParsing="false" onAction="#handleSubmit" prefHeight="39.0" prefWidth="150.0" text="Submit">
+                                    <font>
+                                        <Font name="Arial Bold" size="20.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <Button fx:id="backBtn" layoutX="443.0" layoutY="670.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="42.0" prefWidth="137.0" text="Back">
+            <font>
+                <Font name="Arial Bold" size="20.0" />
+            </font>
+        </Button>
+        <Button fx:id="nextBtn" layoutX="616.0" layoutY="670.0" mnemonicParsing="false" onAction="#handleNext" prefHeight="42.0" prefWidth="137.0" text="Next">
+            <font>
+                <Font name="Arial Bold" size="20.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>
