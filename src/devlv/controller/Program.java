@@ -21,7 +21,7 @@ public class Program extends Application {
     public void start(Stage primaryStage) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/devlv/view/Menu.fxml"));
         Scene scene = new Scene(root, 600, 400);
-        primaryStage.setTitle("Dev Level Calculator!");
+        primaryStage.setTitle("Google employee management!");
         primaryStage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();

@@ -114,7 +114,7 @@ public class MenuDisplayController implements Initializable {
 
     private void showRemoveConfirmation(String name) {
         Alert a = new Alert(Alert.AlertType.INFORMATION);
-        Text text = new Text("Nhân viên " + name + " đã nghỉ việc.");
+        Text text = new Text("Nhân viên " + name + " đã được nghỉ việc.");
         text.setFont(Font.font("Arial", 16));
         text.setWrappingWidth(300);
         a.getDialogPane().setContent(text);

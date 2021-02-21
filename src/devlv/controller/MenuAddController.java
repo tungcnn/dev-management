@@ -43,7 +43,7 @@ public class MenuAddController implements Initializable {
     private Label label;
     @FXML
     private ComboBox<String> position;
-    
+
     Parent root;
     Scene scene;
     Stage stage;
@@ -69,31 +69,29 @@ public class MenuAddController implements Initializable {
 
     @FXML
     private void handleInterview(MouseEvent event) throws IOException {
-        Dev dev = createDev();
-        DevManagement.add(dev);
-        showGuide();
-        root = FXMLLoader.load(getClass().getResource("/devlv/view/Question.fxml"));
-        scene = new Scene(root, 1200, 720);
-        stage = (Stage) label.getScene().getWindow();
-        stage.setUserData(dev);
-        stage.setScene(scene);
+        try {
+            Dev dev = createDev();
+            DevManagement.add(dev);
+            showGuide();
+            root = FXMLLoader.load(getClass().getResource("/devlv/view/Question.fxml"));
+            scene = new Scene(root, 1200, 720);
+            stage = (Stage) label.getScene().getWindow();
+            stage.setUserData(dev);
+            stage.setScene(scene);
+            stage.setX(0);
+            stage.setY(0);
+        } catch (NullPointerException e) {
+            showEmptyWarning();
+        }
     }
 
     private Dev createDev() {
         String appliedPosition = position.getSelectionModel().getSelectedItem();
-        if (nameField.getText() == "" || dateField.getText() == "" || idField.getText() == "" || appliedPosition == "") {
-            Alert a = new Alert(AlertType.WARNING);
-            Text text = new Text("Chưa điền đầy đủ thông tin!");
-            text.setFont(Font.font("Arial", 16));
-            text.setWrappingWidth(300);
-            a.getDialogPane().setContent(text);
-            a.show();
-        } 
+
         Dev dev = DevFactory.getDev(appliedPosition);
         dev.setName(nameField.getText());
         dev.setDate(dateField.getText());
         dev.setId(idField.getText());
-        System.out.println(dev.getRate());
         return dev;
     }
 
@@ -108,6 +106,7 @@ public class MenuAddController implements Initializable {
         a.getDialogPane().setContent(text);
         a.show();
     }
+
     private void showAddConfirm(Dev dev) {
         Alert a = new Alert(AlertType.INFORMATION);
         Text text = new Text("Đã thêm " + dev.toString());
@@ -116,13 +115,29 @@ public class MenuAddController implements Initializable {
         a.getDialogPane().setContent(text);
         a.show();
     }
+
     @FXML
     private void handleSkip(MouseEvent event) throws IOException {
-        Dev dev = createDev();
-        DevManagement.add(dev);
-        showAddConfirm(dev);
-        backToMenu();
+        try {
+            Dev dev = createDev();
+            DevManagement.add(dev);
+            showAddConfirm(dev);
+            backToMenu();
+        } catch (NullPointerException e) {
+            showEmptyWarning();
+        }
+
     }
+
+    private void showEmptyWarning() {
+        Alert a = new Alert(AlertType.WARNING);
+        Text text = new Text("Chưa điền đầy đủ thông tin!");
+        text.setFont(Font.font("Arial", 16));
+        text.setWrappingWidth(300);
+        a.getDialogPane().setContent(text);
+        a.show();
+    }
+
     private void backToMenu() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/devlv/view/Menu.fxml"));
         Scene scene = new Scene(root, 600, 400);

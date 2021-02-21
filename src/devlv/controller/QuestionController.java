@@ -1,29 +1,26 @@
 package devlv.controller;
 
 import devlv.entities.Dev;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
 import java.text.DecimalFormat;
-import java.util.ResourceBundle;
+import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.animation.*;
+import javafx.application.Platform;
+import javafx.concurrent.Service;
+import javafx.concurrent.Task;
+import javafx.concurrent.WorkerStateEvent;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TabPane;
-import javafx.scene.control.ToggleGroup;
-import javafx.scene.text.Font;
-import javafx.scene.text.Text;
+import javafx.event.Event;
+import javafx.event.EventHandler;
+import javafx.fxml.*;
+import javafx.scene.*;
+import javafx.scene.control.*;
+import javafx.scene.text.*;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 public class QuestionController implements Initializable {
 
@@ -91,10 +88,17 @@ public class QuestionController implements Initializable {
     private Button backBtn;
     @FXML
     private Button nextBtn;
+    @FXML
+    private Label timer;
+    @FXML
+    private Button startBtn;
+
+    private static int counter = 180;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
+        timeline.setCycleCount(180);
+        timeline.play();
     }
 
     @FXML
@@ -118,7 +122,7 @@ public class QuestionController implements Initializable {
             Dev dev = (Dev) stage.getUserData();
             String position = dev.getClass().getSimpleName();
             double average = sum / 28;
-            average = Math.round(average*100.0)/100.0;
+            average = Math.round(average * 100.0) / 100.0;
             dev.setScore(average);
             boolean passLeader = "TeamLeader".equals(position) && average >= 2.3;
             boolean passSenior = "Senior".equals(position) && average >= 1.5;
@@ -126,8 +130,7 @@ public class QuestionController implements Initializable {
             boolean passIntern = "Intern".equals(position) && average >= 0.3;
             if (passLeader || passSenior || passJunior || passIntern) {
                 showInfo(dev);
-            }
-            else {
+            } else {
                 showFail(average);
                 DevManagement.remove(dev);
             }
@@ -181,4 +184,13 @@ public class QuestionController implements Initializable {
         Stage stage = (Stage) tabPane.getScene().getWindow();
         stage.setScene(scene);
     }
+
+    @FXML
+    private void handleStart(ActionEvent event) {
+
+    }
+    final Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1),event->{
+        timer.setText(String.valueOf(counter));
+        counter--;
+    }));
 }

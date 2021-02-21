@@ -14,8 +14,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 /**
@@ -58,9 +61,13 @@ public class MenuEditController implements Initializable {
 
     @FXML
     private void handleSave(MouseEvent event) throws IOException {
-        saveInfo();
-        back();
-        DevManagement.writeToFile();
+        try {
+            saveInfo();
+            back();
+            DevManagement.writeToFile();
+        } catch (NullPointerException e) {
+            showEmptyWarning();
+        }
     }
 
     private void saveInfo() {
@@ -81,11 +88,25 @@ public class MenuEditController implements Initializable {
 
     @FXML
     private void handleTest(MouseEvent event) throws IOException {
-        saveInfo();
-        root = FXMLLoader.load(getClass().getResource("/devlv/view/Question.fxml"));
-        scene = new Scene(root, 1200, 720);
-        stage = (Stage) name.getScene().getWindow();
-        stage.setScene(scene);
+        try {
+            saveInfo();
+            root = FXMLLoader.load(getClass().getResource("/devlv/view/Question.fxml"));
+            scene = new Scene(root, 1200, 720);
+            stage = (Stage) name.getScene().getWindow();
+            stage.setScene(scene);
+            stage.setX(0);
+            stage.setY(0);
+        } catch (NullPointerException e) {
+            showEmptyWarning();
+        }
     }
 
+    private void showEmptyWarning() {
+        Alert a = new Alert(Alert.AlertType.WARNING);
+        Text text = new Text("Hãy điền thông tin mới, hoặc bấm nút 'Show' để tự điền thông tin cũ.");
+        text.setFont(Font.font("Arial", 16));
+        text.setWrappingWidth(300);
+        a.getDialogPane().setContent(text);
+        a.show();
+    }
 }
