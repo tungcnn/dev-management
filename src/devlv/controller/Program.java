@@ -39,7 +39,8 @@ public class Program extends Application {
         File file = new File(PATH);
         if (!file.isFile()) {
             file.createNewFile();
+        } else {
+            DevManagement.devs = (ArrayList<Dev>) ReadWriteFile.readFromFile(PATH);
         }
-        DevManagement.devs = (ArrayList<Dev>) ReadWriteFile.readFromFile(PATH);
     }
 }
