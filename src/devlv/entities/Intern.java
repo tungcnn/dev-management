@@ -9,14 +9,9 @@ package devlv.entities;
  *
  * @author SonTung
  */
-public class Intern extends Dev{
+public class Intern extends Dev {
     public Intern() {
         this.baseSalary = 1000000;
         this.rate = 1;
-    }
-    @Override
-    public String toString() {
-        return "Dev{" + "name=" + name + ", date=" + date + ", id=" + id + ", score=" + score + ", baseSalary=" + baseSalary + ", rate=" + rate + ", position=" + position + '}';
-    }
-    
+    }    
 }

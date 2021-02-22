@@ -1,5 +1,6 @@
-package devlv.controller;
+package devlv.controller.scenecontroller;
 
+import devlv.controller.DevManagement;
 import devlv.entities.Dev;
 import java.io.*;
 import java.net.URL;
@@ -97,8 +98,15 @@ public class QuestionController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        timeline.setCycleCount(180);
+        timeline.setCycleCount(6);
         timeline.play();
+        timeline.setOnFinished(event->{
+            try {
+                backMenu();
+            } catch (IOException ex) {
+                Logger.getLogger(QuestionController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        });
     }
 
     @FXML

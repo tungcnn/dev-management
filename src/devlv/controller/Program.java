@@ -1,18 +1,21 @@
 package devlv.controller;
 
+import static devlv.controller.DevManagement.*;
+import devlv.controller.scenecontroller.QuestionController;
 import devlv.entities.Dev;
+import java.io.EOFException;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.Scanner;
+import java.io.ObjectInputStream;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 public class Program extends Application {
@@ -32,22 +35,11 @@ public class Program extends Application {
         launch(args);
     }
 
-    void initializeDataBase() throws FileNotFoundException {
-        File file = new File("devs.txt");
-        Scanner reader = new Scanner(file);
-        while (reader.hasNextLine()) {
-            String[] str = reader.nextLine().split(",");
-            String name = str[0];
-            String date = str[1];
-            String id = str[2];
-            double score = Double.parseDouble(str[3]);
-            String position = str[4];
-            Dev dev = DevFactory.getDev(position);
-            dev.setName(name);
-            dev.setDate(date);
-            dev.setId(id);
-            dev.setScore(score);
-            DevManagement.devs.add(dev);
+    void initializeDataBase() throws FileNotFoundException, IOException {
+        File file = new File(PATH);
+        if (!file.isFile()) {
+            file.createNewFile();
         }
+        DevManagement.devs = (ArrayList<Dev>) ReadWriteFile.readFromFile(PATH);
     }
 }

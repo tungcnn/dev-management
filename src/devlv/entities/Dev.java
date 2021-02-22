@@ -5,12 +5,14 @@
  */
 package devlv.entities;
 
+import java.io.Serializable;
 
 /**
  *
  * @author SonTung
  */
-public class Dev {
+public class Dev implements Serializable{
+
     protected String name;
     protected String date;
     protected String id;
@@ -19,9 +21,9 @@ public class Dev {
     protected double baseSalary;
     protected double rate;
     protected String position = this.getClass().getSimpleName();
- 
+
     public Dev() {
-       
+
     }
 
     public Dev(String name, String date, String id) {
@@ -36,7 +38,7 @@ public class Dev {
         this.id = id;
         this.score = score;
     }
-    
+
     public String getName() {
         return name;
     }
@@ -68,9 +70,9 @@ public class Dev {
     public void setScore(double score) {
         this.score = score;
     }
-   
+
     public double getSalary() {
-        return baseSalary*rate;
+        return baseSalary * rate;
     }
 
     public double getBaseSalary() {
@@ -87,6 +89,12 @@ public class Dev {
 
     @Override
     public String toString() {
-        return "";
+        return name
+                + ", ngày sinh: " + date
+                + ", id: " + id
+                + "\nĐiểm bài test: " + score
+                + ", lương cơ bản: " + baseSalary/1000000 + " triệu"
+                + ", hệ số lương: " + rate
+                + "\nVị trí trong công ty: " + position;
     }
 }

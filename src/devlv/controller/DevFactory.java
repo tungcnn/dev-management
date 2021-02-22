@@ -16,7 +16,7 @@ import devlv.entities.TeamLeader;
  * @author SonTung
  */
 public class DevFactory {
-    static Dev getDev(String type) {
+    static public Dev getDev(String type) {
         switch(type) {
             case "Intern":
                 return new Intern();

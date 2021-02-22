@@ -6,13 +6,10 @@
 package devlv.controller;
 
 import devlv.entities.Dev;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.HashSet;
 
 /**
  *
@@ -20,9 +17,10 @@ import java.util.logging.Logger;
  */
 public class DevManagement {
 
-    static ArrayList<Dev> devs = new ArrayList<>();
+    final static public String PATH = "devs.dat";
+    static public ArrayList<Dev> devs = new ArrayList<>();
 
-    static void add(Dev dev) {
+    static public void add(Dev dev) {
         devs.add(dev);
         writeToFile();
     }
@@ -35,6 +33,7 @@ public class DevManagement {
     static public void update() {
         writeToFile();
     }
+
     static public Dev search(String id) {
         for (Dev dev : devs) {
             if (dev.getId().equals(id)) {
@@ -43,19 +42,13 @@ public class DevManagement {
         }
         return null;
     }
-    static public void writeToFile() {
-        try {
-            File myFile = new File("devs.txt");
-            if (!myFile.isFile()) {
-                myFile.createNewFile();
-            }
-            FileWriter myWriter = new FileWriter("devs.txt");
-            for (Dev dev : devs) {
-                myWriter.write(dev.getName() + "," + dev.getDate() + "," + String.valueOf(dev.getId()) + "," + String.valueOf(dev.getScore()) + "," + dev.getClass().getSimpleName() + "\n");
-            }
-            myWriter.close();
-        } catch (IOException ex) {
-            Logger.getLogger(QuestionController.class.getName()).log(Level.SEVERE, null, ex);
+    static public boolean checkID (String id) {
+        for (Dev dev : devs) {
+            if (dev.getId().equals(id)) return false;
         }
+        return true;
+    }
+    static public void writeToFile() {
+        ReadWriteFile.writeObjectToFile(devs, PATH);
     }
 }

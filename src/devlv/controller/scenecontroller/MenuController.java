@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package devlv.controller;
+package devlv.controller.scenecontroller;
 
+import devlv.controller.SceneChanger;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -26,6 +27,8 @@ public class MenuController implements Initializable {
 
     @FXML
     private Label label;
+    
+    SceneChanger sc = SceneChanger.getInstance();
 
     /**
      * Initializes the controller class.
@@ -37,22 +40,12 @@ public class MenuController implements Initializable {
 
     @FXML
     private void toMenuAdd(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/devlv/view/MenuAdd.fxml"));
-        Scene scene = new Scene(root, 600, 400);
-        Stage stage = (Stage) label.getScene().getWindow();
-        stage.setScene(scene);
-    }
-
-    @FXML
-    private void toMenuDelete(MouseEvent event) {
+        sc.switchScene(event, sc.MENU_ADD);
     }
 
     @FXML
     private void toMenuDisplay(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/devlv/view/MenuDisplay.fxml"));
-        Scene scene = new Scene(root, 600, 400);
-        Stage stage = (Stage) label.getScene().getWindow();
-        stage.setScene(scene);
+        sc.switchScene(event, sc.MENU_DISPLAY);
     }
 
     @FXML
