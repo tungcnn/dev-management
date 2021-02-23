@@ -87,6 +87,25 @@ public class Dev implements Serializable{
         return position;
     }
 
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    public void setBaseSalary(double baseSalary) {
+        this.baseSalary = baseSalary;
+    }
+
+    public void setRate(double rate) {
+        this.rate = rate;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
+    
+    public String toCSVFormat() {
+        return name + "," + date + "," + id + "," + score + "," + baseSalary + "," + rate + "," + position + ",";
+    }
     @Override
     public String toString() {
         return name

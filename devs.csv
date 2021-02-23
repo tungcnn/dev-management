@@ -1,0 +1,4 @@
+Name,DateOfBirth,ID,Score,BaseSalary,Rate,Position
+1,1,1,0.0,1000000.0,1.0,Intern,
+2,2,2,0.0,7000000.0,1.2,Junior,
+4,4,4,0.0,2.5E7,1.5,Senior,

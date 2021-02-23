@@ -28,19 +28,10 @@ public class Program extends Application {
         primaryStage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
-        initializeDataBase();
+        ReadWriteFile.read();
     }
 
     public static void main(String[] args) {
         launch(args);
-    }
-
-    void initializeDataBase() throws FileNotFoundException, IOException {
-        File file = new File(PATH);
-        if (!file.isFile()) {
-            file.createNewFile();
-        } else {
-            DevManagement.devs = (ArrayList<Dev>) ReadWriteFile.readFromFile(PATH);
-        }
     }
 }

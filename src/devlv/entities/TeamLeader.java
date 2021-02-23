@@ -12,7 +12,7 @@ package devlv.entities;
 public class TeamLeader extends Dev {
 
     public TeamLeader() {
-        this.baseSalary = 40000000;
+        this.baseSalary = 20000000;
         this.rate = 1.7;
     }
 }

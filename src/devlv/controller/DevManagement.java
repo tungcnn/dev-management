@@ -16,8 +16,6 @@ import java.util.HashSet;
  * @author SonTung
  */
 public class DevManagement {
-
-    final static public String PATH = "devs.dat";
     static public ArrayList<Dev> devs = new ArrayList<>();
 
     static public void add(Dev dev) {
@@ -49,6 +47,6 @@ public class DevManagement {
         return true;
     }
     static public void writeToFile() {
-        ReadWriteFile.writeObjectToFile(devs, PATH);
+        ReadWriteFile.write(devs);
     }
 }
